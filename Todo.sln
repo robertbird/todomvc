@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.jQuery", "architecture-examples\jquery-vs\Todo.jQuery.csproj", "{22D836AF-DEAB-4F51-8FC0-1BF63D33CC7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Backbone", "architecture-examples\backbone-vs\Todo.Backbone.csproj", "{BDB9FA80-1AF8-4CEA-B70A-522971BD0C85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Backbone.Marionette", "labs\architecture-examples\backbone_marionette-vs\Todo.Backbone.Marionette.csproj", "{70C262BC-F11F-494C-8745-D6EDE2ECAFCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22D836AF-DEAB-4F51-8FC0-1BF63D33CC7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D836AF-DEAB-4F51-8FC0-1BF63D33CC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D836AF-DEAB-4F51-8FC0-1BF63D33CC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D836AF-DEAB-4F51-8FC0-1BF63D33CC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB9FA80-1AF8-4CEA-B70A-522971BD0C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB9FA80-1AF8-4CEA-B70A-522971BD0C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB9FA80-1AF8-4CEA-B70A-522971BD0C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB9FA80-1AF8-4CEA-B70A-522971BD0C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C262BC-F11F-494C-8745-D6EDE2ECAFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C262BC-F11F-494C-8745-D6EDE2ECAFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C262BC-F11F-494C-8745-D6EDE2ECAFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C262BC-F11F-494C-8745-D6EDE2ECAFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
