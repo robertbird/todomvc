@@ -29,20 +29,20 @@
 			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 		</footer>
 		<script id="todo-template" type="text/x-handlebars-template">
-		{{#this}}
-		<li {{#if completed}}class="completed"{{/if}} data-id="{{id}}">
-			<div class="view">
-				<input class="toggle" type="checkbox" {{#if completed}}checked{{/if}}>
-				<label>{{title}}</label>
-				<button class="destroy"></button>
-			</div>
-			<input class="edit" value="{{title}}">
-		</li>
-		{{/this}}
+		    {{#this}}
+		    <li {{#if completed}}class="completed"{{/if}} data-id="{{id}}">
+			    <div class="view">
+				    <input class="toggle" type="checkbox" {{#if completed}}checked{{/if}}>
+				    <label>{{title}}</label>
+				    <button class="destroy"></button>
+			    </div>
+			    <input class="edit" value="{{title}}">
+		    </li>
+		    {{/this}}
 		</script>
 		<script id="footer-template" type="text/x-handlebars-template">
-		<span id="todo-count"><strong>{{activeTodoCount}}</strong> {{activeTodoWord}} left</span>
-		{{#if completedTodos}}<button id="clear-completed">Clear completed ({{completedTodos}})</button>{{/if}}
+		    <span id="todo-count"><strong>{{activeTodoCount}}</strong> {{activeTodoWord}} left</span>
+		    {{#if completedTodos}}<button id="clear-completed">Clear completed ({{completedTodos}})</button>{{/if}}
 		</script>
 		<script src="bower_components/todomvc-common/base.js"></script>
 		<script src="bower_components/jquery/jquery.js"></script>
