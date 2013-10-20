@@ -93,15 +93,6 @@ var app = app || {};
 			app.todos.each(this.filterOne, this);
 		},
 
-		// Generate the attributes for a new Todo item.
-		newAttributes: function () {
-			return {
-				title: this.$input.val().trim(),
-				order: app.todos.nextOrder(),
-				completed: false
-			};
-		},
-
 		// If you hit return in the main input field, create new **Todo** model,
 		// persisting it to *localStorage*.
 		createOnEnter: function (e) {
@@ -109,7 +100,10 @@ var app = app || {};
 				return;
 			}
 
-			app.todos.create(this.newAttributes());
+			app.todos.create({
+				title: this.$input.val().trim(),
+				completed: false
+			});
 			this.$input.val('');
 		},
 
