@@ -40,11 +40,11 @@ jQuery(function ($) {
             this.render();
         },
         createTemplates: function () {
-            this.todoTemplate = Handlebars.compile($('#todo-template').html());
-            this.footerTemplate = Handlebars.compile($('#footer-template').html());
+            this.todoTemplate = _.template($('#todo-template').html());
+            this.footerTemplate = _.template($('#footer-template').html());
         },
         render: function () {
-            $('#todo-list').html(this.todoTemplate(this.todos));
+            $('#todo-list').html(this.todoTemplate({ todos: this.todos }));
             $('#main').toggle(!!this.todos.length); // !! = convert to boolean
             $('#toggle-all').prop('checked', !this.activeTodoCount());
             this.renderFooter();
