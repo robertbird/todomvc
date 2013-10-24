@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{22D836AF-DEAB-4F51-8FC0-1BF63D33CC7C}</ProjectGuid>
+    <ProjectGuid>{5108E856-69F5-4B0E-B192-9885DC496B8E}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TodojQuery</RootNamespace>
-    <AssemblyName>TodojQuery</AssemblyName>
+    <RootNamespace>Todo.JQueryRefactored</RootNamespace>
+    <AssemblyName>Todo.JQueryRefactored</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -65,10 +65,19 @@
     <Content Include="css\app.css" />
     <Content Include="index.html" />
     <Content Include="js\app.js" />
+    <Content Include="js\models\TodoModel.js" />
+    <Content Include="js\Collection\TodoCollection.js" />
+    <Content Include="js\views\FooterView.js" />
+    <Content Include="js\views\FormView.js" />
+    <Content Include="js\views\ItemView.js" />
+    <Content Include="js\views\ListView.js" />
+    <Content Include="Scripts\backbone.js" />
+    <Content Include="Scripts\backbone.marionette.js" />
+    <Content Include="Scripts\backbone.marionette.min.js" />
+    <Content Include="Scripts\backbone.min.js" />
+    <Content Include="bower.json" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.2.intellisense.js" />
-    <Content Include="Scripts\backbone.js" />
-    <Content Include="Scripts\backbone.min.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js" />
     <Content Include="Scripts\underscore.js" />
@@ -79,8 +88,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bower.json" />
-    <Content Include="readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -104,7 +111,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63230/</IISUrl>
+          <IISUrl>http://localhost:56705/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

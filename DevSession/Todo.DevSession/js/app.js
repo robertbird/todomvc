@@ -49,7 +49,10 @@ jQuery(function ($) {
             // for perf render each item to an inmemory element
             var $fragment = $("<div></div>");
             _.each(this.todos, function (todo) {
-                $fragment.append(Todo.App.todoTemplate({ todo: todo }));
+                var model = new Todo.TodoModel(todo);
+                var view = new Todo.ItemView({ model: model });
+                $fragment.append(view.render().el);
+                //$fragment.append(Todo.App.todoTemplate({ todo: todo }));
             });
             $('#todo-list').html($fragment);
 
@@ -139,51 +142,6 @@ jQuery(function ($) {
         }
 
         Todo.App.render();
-    });
-
-    // Tick / Untick
-    $('#todo-list').on('change', '.toggle', function () {
-        Todo.App.getTodo(this, function (i, val) {
-            val.completed = !val.completed;
-        });
-        Todo.App.render();
-    });
-
-    // Edit
-    $('#todo-list').on('dblclick', 'label', function () {
-        var $input = $(this).closest('li').addClass('editing').find('.edit');
-        var val = $input.val();
-
-        $input.val(val).focus();
-    });
-
-    // End Edit - blur on clicking 'Enter'
-    $('#todo-list').on('keypress', '.edit', function (e) {
-        if (e.which === ENTER_KEY) {
-            e.target.blur();
-        }
-    });
-    
-    // End Edit - finished
-    $('#todo-list').on('blur', '.edit', function () {
-        var val = $.trim($(this).removeClass('editing').val());
-
-        Todo.App.getTodo(this, function (i) {
-            if (val) {
-                Todo.App.todos[i].title = val;
-            } else {
-                Todo.App.todos.splice(i, 1);
-            }
-            Todo.App.render();
-        });
-    });
-    
-    // Delete
-    $('#todo-list').on('click', '.destroy', function () {
-        Todo.App.getTodo(this, function (i) {
-            Todo.App.todos.splice(i, 1);
-            Todo.App.render();
-        });
     });
 
     Todo.App.init();
